@@ -8,7 +8,7 @@ class MyTestCase(unittest.TestCase):
         edges = {}
 
         map = Map(edges)
-        next = map.next("A")
+        next = map.next("A", "B")
 
         self.assertIsNone(next)
 
@@ -45,7 +45,7 @@ class MyTestCase(unittest.TestCase):
 
         self.assertEqual("B", next)
 
-    def test_multiple_routes(self):
+    def test_multiple_equal_routes(self):
         edges = {
             "A": ["B","C"],
             "B": ["D"],
@@ -55,6 +55,21 @@ class MyTestCase(unittest.TestCase):
 
         map = Map(edges)
         next = map.next("A", "D")
+
+        self.assertEqual("C", next)
+
+    def test_multiple_different_length_routes(self):
+        edges = {
+            "A": ["B", "C"],
+            "B": ["E"],
+            "C": ["D"],
+            "D": ["E"],
+            "E": []
+        }
+
+        map = Map(edges)
+
+        next = map.next("A", "E")
 
         self.assertEqual("B", next)
 
