@@ -1,0 +1,11 @@
+@startuml
+
+package item {
+    
+
+    class Item extends MoveableEntity
+
+}
+
+
+@enduml

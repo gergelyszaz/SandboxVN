@@ -1,0 +1,16 @@
+@startuml
+
+autoactivate on
+
+World -> Character : do()
+    Character -> Schedule: getCurrentEvents()
+        Schedule -> Event: getSelectors()
+            Event -> Selector: isMatch()
+            return
+        return
+    return 
+    Character -> Event: getAction()
+return
+
+
+@enduml

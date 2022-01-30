@@ -1,0 +1,9 @@
+@startuml
+
+!include core.puml
+!include location.puml
+!include item.puml
+!include schedule.puml
+!include character.puml
+
+@endumls

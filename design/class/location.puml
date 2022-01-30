@@ -1,0 +1,31 @@
+@startuml
+
+package location {
+    class Location extends Entity
+
+    class MoveableEntity extends Entity
+
+    class Path {
+        weight : Number
+    }
+
+    class World << (S,#FF7700) Singleton>> extends Entity {
+        currentTime : Time
+    }
+
+    class LocationSelector implements Selector {
+
+    }
+
+}
+
+World *-- Location
+Location *-- Path
+Path --> Location : destination
+LocationSelector ..> Location
+MoveableEntity --> Location
+World *-- Entity
+World o-- Actor
+
+
+@enduml

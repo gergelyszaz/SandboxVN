@@ -1,0 +1,13 @@
+@startuml
+
+
+package character{
+class Character extends MoveableEntity implements Actor{
+
+}
+
+}
+
+Character "1" *-- Schedule
+
+@enduml

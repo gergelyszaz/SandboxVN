@@ -1,0 +1,19 @@
+@startuml
+
+!include location.puml
+
+package schedule {
+    class Schedule {
+        +getCurrentEvents(): List<CalendarEvent>
+    }
+    class CalendarEvent {
+        startTime: Time
+        endTime: Time
+        priority: Number
+    }
+}
+
+Schedule *-- CalendarEvent
+CalendarEvent *-- LocationSelector
+
+@enduml
