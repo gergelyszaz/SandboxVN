@@ -1,9 +1,9 @@
 @startuml action
 
 package action {
-    class Action {
-        #duration: Time
+    interface Action {
         +do(Character)
+        +getDuration(): Time
     }
 
     class GotoLocationAction

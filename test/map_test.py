@@ -1,6 +1,6 @@
 import unittest
 
-from core.map import Map
+from sandbox.location.map import Map
 
 
 class MyTestCase(unittest.TestCase):
