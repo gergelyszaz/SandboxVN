@@ -6,9 +6,13 @@ package character{
         -clock : Clock
         -currentAction : Action
         -currentActionStarted : Time
-        -properties : Map<String, String>
-        -location : Location
+        +properties : Map<String, String>
+        +location : Location
         +update()
+    }
+
+    class Habit {
+        name: String
     }
 
 }
@@ -19,5 +23,7 @@ Character "1" *-- Map
 Action ..> Character
 Character ..> Action
 Character ..> Location
+Character o-- Habit
+Habit "1" *-- Schedule
 
 @enduml
