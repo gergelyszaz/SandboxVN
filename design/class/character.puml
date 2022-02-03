@@ -1,13 +1,23 @@
-@startuml
+@startuml character
 
 
 package character{
-class Character extends MoveableEntity implements Actor{
-
-}
+    class Character{
+        -clock : Clock
+        -currentAction : Action
+        -currentActionStarted : Time
+        -properties : Map<String, String>
+        -location : Location
+        +update()
+    }
 
 }
 
 Character "1" *-- Schedule
+Character "1" *-- Map
+
+Action ..> Character
+Character ..> Action
+Character ..> Location
 
 @enduml

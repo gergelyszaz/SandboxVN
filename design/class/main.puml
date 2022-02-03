@@ -1,9 +1,20 @@
-@startuml
+@startuml main
+skinparam linetype ortho
 
-!include core.puml
-!include location.puml
-!include item.puml
-!include schedule.puml
-!include character.puml
+package sandbox {
+    !include target.puml
+    !include action.puml
+
+    !include schedule.puml
+
+    !include location.puml
+
+    !include character.puml
+
+    !include world.puml
+}
+
+
+
 
 @endumls

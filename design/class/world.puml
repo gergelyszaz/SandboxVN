@@ -1,0 +1,15 @@
+@startuml world
+
+package world{
+
+class World << (S,#FF7700) Singleton>> {
+    currentTime : Time
+}
+
+}
+
+World "1" *-- Map
+World *-- Character
+
+
+@enduml

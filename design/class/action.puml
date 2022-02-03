@@ -1,0 +1,27 @@
+@startuml action
+
+package action {
+    class Action {
+        #duration: Time
+        +do(Character)
+    }
+
+    class GotoLocationAction
+    note right
+        Passes all Location of Character to 
+        LocationSelector. If any matches, 
+        moves the character to the next Location.
+    end note
+    class GotoLocationAction extends Action
+
+    
+    
+
+    class ModifyPropertyAction extends Action
+}
+
+
+GotoLocationAction --> LocationSelector
+
+
+@enduml

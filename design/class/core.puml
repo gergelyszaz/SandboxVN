@@ -1,26 +1,7 @@
-@startuml
-
-package core {
-
-    class Property {
-        name: String
-        value: String
-    }
-
-    class Entity {}
-
-    interface Selector {
-        +isMatch(Entity: entity)
-    }
-
-    interface Actor {
-        +do()
-    }
-
-}
+@startuml core
 
 
-Entity *-- Property: properties
-Selector ..> Entity
+
+
 
 @enduml

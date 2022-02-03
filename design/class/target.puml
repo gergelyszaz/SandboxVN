@@ -1,0 +1,8 @@
+@startuml
+
+package target {
+    class LocationSelector
+}
+
+
+@enduml

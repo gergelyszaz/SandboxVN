@@ -1,19 +1,38 @@
-@startuml
-
-!include location.puml
+@startuml schedule
 
 package schedule {
     class Schedule {
-        +getCurrentEvents(): List<CalendarEvent>
+        +addEvent(Event)
+        +getCurrentEvents(Time): List<CalendarEvent>
     }
     class CalendarEvent {
-        startTime: Time
-        endTime: Time
-        priority: Number
+        -name : String
+        -calculator : Calculator
+        -actions : Action[]
+        +getNextAction() : Action
+        +getPriority() : Number
     }
+    note right
+        If the current Location of the Character 
+        does not satisfy the LocationSelector, 
+        the next Action will be a Goto action
+        to a Location that satisfies the selector
+    end note
+    
+
+    class TimeFrame {
+        startTime : Time
+        endTime : Time
+        onDaysOfTheWeek
+        repeatWeakly
+    }
+
+    
 }
 
 Schedule *-- CalendarEvent
-CalendarEvent *-- LocationSelector
+CalendarEvent *-- Action
+CalendarEvent *-- TimeFrame
+CalendarEvent "1" *-- LocationSelector
 
 @enduml

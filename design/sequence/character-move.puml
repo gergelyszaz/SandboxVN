@@ -1,0 +1,20 @@
+@startuml
+autoactivate on
+
+World -> Character : do()
+
+alt is not doing Action
+Character -> Schedule : getNextCalendarEvents()
+return
+loop for each CalendarEvent
+Character -> CalendarEvent : getPriority()
+return
+end
+Character -> CalendarEvent : getNextAction()
+return
+Character -> Action : do()
+return
+else check if action finished
+
+end
+@enduml
