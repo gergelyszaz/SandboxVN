@@ -1,5 +1,7 @@
 import string
+from typing import List
 from sandbox.action.action import Action
+from sandbox.character.habit import Habit
 from sandbox.location.location import Location
 from sandbox.location.map import Map
 from sandbox.schedule.schedule import Schedule
@@ -10,7 +12,7 @@ class Character:
     currentAction: Action
     currentActionStarted: int
     location: Location
-    schedule: Schedule
+    habits: List[Habit]
     map: Map
 
     def update(self, time):
