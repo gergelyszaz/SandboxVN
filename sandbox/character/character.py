@@ -18,8 +18,7 @@ class Character:
         if self.currentAction is not None:
             if self.currentActionStarted + self.currentAction.duration > time:
                 return
-            else:
-                self.currentAction = None
+            self.currentAction = None
 
         events = self.schedule.getCurrentEvents(time)
         if len(events) == 0:
