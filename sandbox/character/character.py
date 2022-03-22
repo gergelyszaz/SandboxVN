@@ -4,7 +4,6 @@ from sandbox.action.action import Action
 from sandbox.character.habit import Habit
 from sandbox.location.location import Location
 from sandbox.location.map import Map
-from sandbox.schedule.schedule import Schedule
 
 
 class Character:
