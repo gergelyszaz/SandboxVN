@@ -21,7 +21,7 @@ class MyTestCase(unittest.TestCase):
             CalendarEvent
 
         ]
-        
+
         character = Character()
         character.map = map
         character.habits = [habit]
@@ -32,4 +32,4 @@ class MyTestCase(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-    
+

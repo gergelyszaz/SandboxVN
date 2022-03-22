@@ -3,7 +3,7 @@ from typing import List
 from sandbox.schedule.calendarevent import CalendarEvent
 class Schedule:
     events: List[CalendarEvent]
-    
+
     def addEvent(self, event: CalendarEvent):
         self.events.append(event)
 
