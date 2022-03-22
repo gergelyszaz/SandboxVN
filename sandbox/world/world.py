@@ -11,7 +11,6 @@ class World:
     def __init__(self, map: Map, characters: List[Character]) -> None:
         self.characters = characters
         self.map = map
-        pass
 
     def update(self):
         self.currentTime += 1
