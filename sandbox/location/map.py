@@ -3,6 +3,6 @@ from sandbox.location.location import Location
 from sandbox.location.path import Path
 
 
-class Map(object):
+class Map:
     locations: List[Location]
     paths: List[Path]
