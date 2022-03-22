@@ -19,5 +19,5 @@ class CalendarEvent:
     def getNextAction(self, character: Character) -> Action:
         if self.locationSelector.check(character.location):
             return self.action
-        
+
         return GotoLocationAction(locationSelector=self.locationSelector)

@@ -25,7 +25,7 @@ class Character:
         events = self.schedule.getCurrentEvents(time)
         if len(events) == 0:
             return
-        
+
         self.currentAction = events[0].getNextAction(self)
         self.currentActionStarted = time
         self.currentAction.do(self)
