@@ -1,2 +1,3 @@
 # Sandbox
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=gergelyszaz_SandboxVN&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=gergelyszaz_SandboxVN) 
+[![DeepSource](https://deepsource.io/gh/gergelyszaz/SandboxVN.svg/?label=active+issues&show_trend=true&token=BE5JLPk9fp79qgvaiAyjMfA1)](https://deepsource.io/gh/gergelyszaz/SandboxVN/?ref=repository-badge)
