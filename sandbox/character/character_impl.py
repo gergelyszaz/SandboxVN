@@ -13,7 +13,7 @@ class CharacterImpl(Character):
     current_action: Action = None
     current_action_started_at_time: int = 0
     location: Location = Location()
-    habits: list[Habit] = list()
+    habits: list[Habit] = []
     map: Map = Map()
     schedule: Schedule = Schedule()
 
