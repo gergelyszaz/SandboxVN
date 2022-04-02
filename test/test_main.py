@@ -18,9 +18,7 @@ class MyTestCase(unittest.TestCase):
         habit = Habit()
         habit.name = "test"
         habit.schedule = Schedule()
-        habit.schedule.events = [
-            CalendarEvent
-        ]
+        habit.schedule.events = [CalendarEvent]
 
         character: Character = CharacterImpl()
         character.map = world_map
@@ -33,5 +31,5 @@ class MyTestCase(unittest.TestCase):
         world.update()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
