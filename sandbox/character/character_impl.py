@@ -34,6 +34,6 @@ class CharacterImpl(Character):
             return
 
         # get the next action from the top priority event and execute it
-        self.current_action = events[0].getNextAction(self)
+        self.current_action = events[0].get_next_action(self)
         self.current_action_started_at_time = time
         self.current_action.do(self)

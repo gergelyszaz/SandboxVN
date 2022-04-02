@@ -10,14 +10,14 @@ from sandbox.target.locationselector import LocationSelector
 class CalendarEvent:
     name: string
     action: Action
-    locationSelector: LocationSelector
+    location_selector: LocationSelector
     timeframe: TimeFrame
 
     def __init__(self, action: Action) -> None:
         self.actions = action
 
-    def getNextAction(self, character: Character) -> Action:
-        if self.locationSelector.check(character.location):
+    def get_next_action(self, character: Character) -> Action:
+        if self.location_selector.check(character.location):
             return self.action
 
-        return GotoLocationAction(locationSelector=self.locationSelector)
+        return GotoLocationAction(location_selector=self.location_selector)

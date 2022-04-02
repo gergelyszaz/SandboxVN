@@ -7,20 +7,20 @@ class MyTestCase(unittest.TestCase):
     def test_empty_map(self):
         edges = {}
 
-        map = Map(edges)
-        next = map.next("A", "B")
+        world_map = Map(edges)
+        next_node = world_map.next("A", "B")
 
-        self.assertIsNone(next)
+        self.assertIsNone(next_node)
 
     def test_no_route(self):
         edges = {
             "A": []
         }
 
-        map = Map(edges)
-        next = map.next("A", "no end")
+        world_map = Map(edges)
+        next_node = world_map.next("A", "no end")
 
-        self.assertIsNone(next)
+        self.assertIsNone(next_node)
 
     def test_short_route(self):
         edges = {
@@ -28,10 +28,10 @@ class MyTestCase(unittest.TestCase):
             "B": []
         }
 
-        map = Map(edges)
-        next = map.next("A", "B")
+        world_map = Map(edges)
+        next_node = world_map.next("A", "B")
 
-        self.assertEqual("B", next)
+        self.assertEqual("B", next_node)
 
     def test_long_route(self):
         edges = {
@@ -40,10 +40,10 @@ class MyTestCase(unittest.TestCase):
             "C": []
         }
 
-        map = Map(edges)
-        next = map.next("A", "C")
+        world_map = Map(edges)
+        next_node = world_map.next("A", "C")
 
-        self.assertEqual("B", next)
+        self.assertEqual("B", next_node)
 
     def test_multiple_equal_routes(self):
         edges = {
@@ -53,10 +53,10 @@ class MyTestCase(unittest.TestCase):
             "D": []
         }
 
-        map = Map(edges)
-        next = map.next("A", "D")
+        world_map = Map(edges)
+        next_node = world_map.next("A", "D")
 
-        self.assertEqual("C", next)
+        self.assertEqual("C", next_node)
 
     def test_multiple_different_length_routes(self):
         edges = {
@@ -67,11 +67,11 @@ class MyTestCase(unittest.TestCase):
             "E": []
         }
 
-        map = Map(edges)
+        world_map = Map(edges)
 
-        next = map.next("A", "E")
+        next_node = world_map.next("A", "E")
 
-        self.assertEqual("B", next)
+        self.assertEqual("B", next_node)
 
     def test_circle(self):
         edges = {
@@ -79,10 +79,10 @@ class MyTestCase(unittest.TestCase):
             "B": ["A"]
         }
 
-        map = Map(edges)
-        next = map.next("A", "B")
+        world_map = Map(edges)
+        next_node = world_map.next("A", "B")
 
-        self.assertEqual("B", next)
+        self.assertEqual("B", next_node)
 
 
 if __name__ == '__main__':
