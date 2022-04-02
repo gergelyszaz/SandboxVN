@@ -8,6 +8,8 @@ class Schedule:
         self.events.append(event)
 
     def get_current_events(self, time: int) -> list[CalendarEvent]:
-        events: list[CalendarEvent] = [e for e in self.events if e.timeframe.check(time)]
+        events: list[CalendarEvent] = [
+            e for e in self.events if e.timeframe.check(time)
+        ]
 
         return events

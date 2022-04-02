@@ -21,7 +21,10 @@ class CharacterImpl(Character):
         # if an action is in progress do nothing,
         # otherwise clear the current action
         if self.current_action is not None:
-            if self.current_action_started_at_time + self.current_action.duration > time:
+            if (
+                self.current_action_started_at_time + self.current_action.duration
+                > time
+            ):
                 return
             self.current_action = None
 
