@@ -3,4 +3,4 @@ class TimeFrame:
     end: int
 
     def check(self, time: int) -> bool:
-        return time >= self.start and time <= self.end
+        return self.start <= time <= self.end
