@@ -14,7 +14,5 @@ class GotoLocationAction(Action):
         if self.locationSelector.check(character.location):
             return
 
-
-
-        #TODO
+        # TODO
         return super().do(character)
