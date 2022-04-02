@@ -1,11 +1,13 @@
-from asyncio import events
-from typing import List
 from sandbox.schedule.calendarevent import CalendarEvent
-class Schedule:
-    events: List[CalendarEvent]
 
-    def addEvent(self, event: CalendarEvent):
+
+class Schedule:
+    events: list[CalendarEvent] = list()
+
+    def add_event(self, event: CalendarEvent):
         self.events.append(event)
 
-    def getCurrentEvents(self, time: int) -> List[CalendarEvent]:
-        return [e for e in events if e.timeframe.check(time)].sort(key="priority", reverse=True)
+    def get_current_events(self, time: int) -> list[CalendarEvent]:
+        events: list[CalendarEvent] = [e for e in self.events if e.timeframe.check(time)]
+
+        return events
