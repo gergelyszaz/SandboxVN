@@ -38,7 +38,7 @@ jobs:
       - name: Report coverage
         if: always()
         run: |
-          coverage xml -d .coverage-reports
+          coverage xml -o .coverage-reports/coverage.xml
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         if: always()
