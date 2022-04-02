@@ -2,7 +2,7 @@ from sandbox.schedule.calendarevent import CalendarEvent
 
 
 class Schedule:
-    events: list[CalendarEvent] = list()
+    events: list[CalendarEvent] = []
 
     def add_event(self, event: CalendarEvent):
         self.events.append(event)
