@@ -4,15 +4,15 @@ from sandbox.location.map import Map
 
 
 class World:
-    currentTime: int
+    current_time: int = 0
     characters: List[Character]
     map: Map
 
-    def __init__(self, map: Map, characters: List[Character]) -> None:
+    def __init__(self, world_map: Map, characters: List[Character]) -> None:
         self.characters = characters
-        self.map = map
+        self.map = world_map
 
     def update(self):
-        self.currentTime += 1
+        self.current_time += 1
         for character in self.characters:
-            character.update()
+            character.update(self.current_time)
