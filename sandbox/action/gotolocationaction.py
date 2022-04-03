@@ -4,14 +4,14 @@ from sandbox.target.locationselector import LocationSelector
 
 
 class GotoLocationAction(Action):
-    locationSelector: LocationSelector
+    location_selector: LocationSelector
 
     def __init__(self, location_selector: LocationSelector) -> None:
         super().__init__()
-        self.locationSelector = location_selector
+        self.location_selector = location_selector
 
-    def do(self, character: Character):
-        if self.locationSelector.check(character.location):
+    def do(self, character: Character) -> None:
+        if self.location_selector.check(character.location):
             return
 
-        return super().do(character)
+        super().do(character)
